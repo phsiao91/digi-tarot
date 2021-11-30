@@ -1,4 +1,4 @@
 class ReadingSerializer < ActiveModel::Serializer
-  attributes :id, :question, :card1, :card2, :card3
+  attributes :id, :question
   has_one :user
 end
