@@ -1,4 +1,4 @@
 class Reading < ApplicationRecord
   belongs_to :user
-  has_many :saves
+  has_many :tarots
 end

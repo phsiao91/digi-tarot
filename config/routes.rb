@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :saves
+  resources :tarots
   resources :readings
   resources :cards
   resources :users

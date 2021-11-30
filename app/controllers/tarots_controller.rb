@@ -1,0 +1,2 @@
+class TarotsController < ApplicationController
+end

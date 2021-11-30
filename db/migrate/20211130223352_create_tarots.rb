@@ -1,6 +1,6 @@
-class CreateSaves < ActiveRecord::Migration[6.1]
+class CreateTarots < ActiveRecord::Migration[6.1]
   def change
-    create_table :saves do |t|
+    create_table :tarots do |t|
       t.string :name
       t.string :image
       t.string :meaning
