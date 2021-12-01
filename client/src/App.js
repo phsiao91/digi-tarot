@@ -2,34 +2,37 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
+import Home from "./components/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  const [user, setUser] = useState(null)
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        
-
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-
-          <Route path="/login">
-            <h1>Page Count: {count}</h1>
-            <Login />
-          </Route>
-
-          <Route path="/"></Route>
-
-      </div>
-    </BrowserRouter>
+    <div className="App">
+    
+      <main>
+        {user? (
+          <Switch>
+            <Route path="/">
+              <Home user={user}/>
+            </Route>
+          </Switch>
+            ) : (
+          <Switch>
+            <Route path="/login">
+              <Login setUser={setUser}/>
+            </Route>
+            <Route path="/signup">
+              <SignUp setUser={setUser}/>
+            </Route>
+            <Route path="/">
+              <Home/>
+            </Route>
+          </Switch>
+            )}
+      </main>
+    </div>
   );
 }
 

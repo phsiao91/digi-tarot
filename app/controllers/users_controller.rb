@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    skip_before_action :confirm_authentication
+
     def show
         if current_user
             render json: current_user, status: :ok
