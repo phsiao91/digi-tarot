@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
-  before_action: confirm_authentication
+  before_action :confirm_authentication
 
 
   private
