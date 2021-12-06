@@ -35,7 +35,7 @@ function SignUp({ setUser }) {
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-        />
+        /><br></br>
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -43,7 +43,7 @@ function SignUp({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
-        />
+        /><br></br>
         <label htmlFor="password">Password Confirmation</label>
         <input
           type="password"
