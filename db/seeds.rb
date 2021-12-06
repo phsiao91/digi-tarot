@@ -32,7 +32,11 @@ c9 = Card.create(name: "The Chariot", image: "https://www.tarotcardmeanings.net/
 
 c10 = Card.create(name: "Strength", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "It's very significant that on the Tarot Strength card image, she masters the lion not by forcing its jaws apart, like any Tarzan would, but by keeping them together, hiding its teeth. The lion has become harmless and its tongue suggests that it enjoys this. So, it's the strength of neutralizing strength. A beneficial paradox.")
 
-c3 = Card.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.")
+c11 = Card.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.")
+
+c12 = Card.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.")
+
+
 
 # c3 = Card.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.")
 
