@@ -8,6 +8,7 @@ function Welcome({user}) {
     // }
 
     const fetchCards = () => { 
+
         fetch("/card")
 
         .then(response => response.json())

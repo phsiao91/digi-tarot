@@ -21,7 +21,7 @@ function SignUp({ setUser }) {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
-    });
+    }).catch(err => console.log(err));
   }
 
   return (
@@ -54,6 +54,8 @@ function SignUp({ setUser }) {
         />
         <button type="submit">Sign Up</button>
       </form>
+
+      <p>Already have an account? Login</p>
     </div>
   );
 }
