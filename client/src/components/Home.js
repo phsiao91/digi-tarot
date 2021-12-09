@@ -20,22 +20,18 @@ function Home({ user }) {
                   <h4 className="welcome"> Welcome, {user.username}</h4>
                 
                 <div>
-                  <p className="start" >Click here to get started!!!</p>
+                  <p className="start" >Let's get started!</p>
                   
                 </div>
               </div>)
     } else {
       return (
         <div>
-              <div className="prompt">
-              <div>
-                <h1 className="site-name">For Hire!!</h1>
-              </div>
-                <h3 className="prompt_1">Please </h3>
+            <div className="prompt">
                 <h3 className="prompt_2" onClick={login}>Login </h3>
                 <h3 className="prompt_3">or </h3>
                 <h3 className="prompt_4" onClick={signup}>SignUp</h3>
-              </div>
+            </div>
         </div>
       )
     }
