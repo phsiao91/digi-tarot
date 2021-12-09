@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import SignUp from "./components/Signup";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
+import Welcome from "./components/pages/Welcome";
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
         <Router>
           {user? (
             <Switch>
+              <Route path="/welcome">
+                <Welcome user={user}/>
+              </Route>
               <Route path="/">
                 <Home user={user}/>
               </Route>
