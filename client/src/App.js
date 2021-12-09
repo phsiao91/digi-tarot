@@ -3,10 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
 import Home from "./components/Home";
-<<<<<<< HEAD
-=======
 import NavBar from "./components/NavBar";
->>>>>>> 6754ed8765be323e17c3855c04831c9a15110400
 
 function App() {
 
