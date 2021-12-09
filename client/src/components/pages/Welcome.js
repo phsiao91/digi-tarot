@@ -2,12 +2,12 @@ import React from 'react'
 
 function Welcome({user}) {
 
-    state = {
-        cards: []
-    }
+    // state = {
+    //     cards: []
+    // }
 
-    fetchCards = () => { 
-        fetch(BASE_URL)
+    const fetchCards = () => { 
+        fetch("")
 
         .then(response => response.json())
 

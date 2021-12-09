@@ -18,12 +18,15 @@ function App() {
         <Router>
           {user? (
             <Switch>
+
               <Route path="/welcome">
                 <Welcome user={user}/>
               </Route>
+
               <Route path="/">
                 <Home user={user}/>
               </Route>
+              
             </Switch>
             ) : (
             <Switch>
