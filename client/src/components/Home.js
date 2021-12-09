@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useHistory } from "react-router-dom";
+import Welcome from "./pages/Welcome";
 
 function Home({ user }) {
 
@@ -16,13 +17,9 @@ function Home({ user }) {
     }
 
     if (user) {
-      return (<div className="first">
-                  <h4 className="welcome"> Welcome, {user.username}</h4>
+      return (<div>
                 
-                <div>
-                  <p className="start" >Let's get started!</p>
-                  
-                </div>
+                <Welcome user={user}/>
               </div>)
     } else {
       return (
