@@ -1,19 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from "react";
+
 
 function Welcome({user}) {
 
-    state = {
-        cards: []
-    }
+    // state = {
+    //     cards: []
+    // }
 
-    fetchCards = () => { 
-        fetch(BASE_URL)
+    const fetchCards = () => { 
+        fetch("/card")
 
         .then(response => response.json())
 
-        .then(result => {
+        .then(result => { console.log(result)
           this.setState({ 
-            pics: result.cards
+            card: result.cards
             });
           })
 
@@ -23,6 +24,7 @@ function Welcome({user}) {
     // componentDidMount() {
     //     this.fetchCards()
     // }
+    fetchCards()
 
     const selectCards = () => {
         console.log("magic fortune!");
