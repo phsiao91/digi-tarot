@@ -17,10 +17,10 @@ function Home({ user }) {
     }
 
     if (user) {
-      return (<div>
-                
-                <Welcome user={user}/>
-              </div>)
+      return (
+        <div>
+          <Welcome user={user}/>
+        </div>)
     } else {
       return (
         <div>
