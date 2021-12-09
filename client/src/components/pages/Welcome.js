@@ -2,8 +2,31 @@ import React from 'react'
 
 function Welcome({user}) {
 
+    state = {
+        cards: []
+    }
+
+    fetchCards = () => { 
+        fetch(BASE_URL)
+
+        .then(response => response.json())
+
+        .then(result => {
+          this.setState({ 
+            pics: result.cards
+            });
+          })
+
+        .catch(err => console.log(err))
+      }
+
+    // componentDidMount() {
+    //     this.fetchCards()
+    // }
+
     const selectCards = () => {
         console.log("magic fortune!");
+
     };
 
     return (
