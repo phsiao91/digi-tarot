@@ -17,12 +17,9 @@ function Login( {setUser} ) {
               credentials: "include",
               body: JSON.stringify({username, password})
         })
-        .then(res => {
-            if (res.ok) {
-                return res.json().then((user) => setUser(user))
-                .then(setUsername(""), setPassword(""))
-            } else {
-                return res.json().then(errors => Promise.reject(errors))
+        .then((r) => {
+            if (r.ok) {
+              r.json().then((user) => setUser(user));
             }
         })
     }
