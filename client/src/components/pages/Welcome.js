@@ -3,32 +3,23 @@ import React, {useState, useEffect} from "react";
 
 function Welcome({user}) {
 
-    // state = {
-    //     cards: []
-    // }
-
     const fetchCards = () => { 
+        console.log("magic fortune!");
 
         fetch("/card")
-
         .then(response => response.json())
-
         .then(result => { console.log(result)
           this.setState({ 
             card: result.cards
             });
+            console.log(result.cards[2])
           })
-
         .catch(err => console.log(err))
       }
 
-    // componentDidMount() {
-    //     this.fetchCards()
-    // }
-    fetchCards()
 
     const selectCards = () => {
-        console.log("magic fortune!");
+        
 
     };
 
@@ -36,7 +27,7 @@ function Welcome({user}) {
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
 
-            <button onClick={() => selectCards()}>
+            <button onClick={() => fetchCards()}>
                 Get a Reading
             </button>
         </div>
