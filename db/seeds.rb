@@ -86,17 +86,17 @@ c35 = Card.create(name: "Queen of Wands", image: "https://www.tarotcardmeanings.
 
 c36 = Card.create(name: "King of Wands", image: "https://www.tarotcardmeanings.net/images/tarotcards120px/tarot-wands-14.jpg", meaning:"Wealth that is hard to keep. What's the point of prosperity if you don't trust that you can hold on to it? Envy is a poison also to the object of it.")
 
-c37 = Card.create(name: "", image: "", meaning:"")
+# c37 = Card.create(name: "", image: "", meaning:"")
 
-c38 = Card.create(name: "", image: "", meaning:"")
+# c38 = Card.create(name: "", image: "", meaning:"")
 
-c39 = Card.create(name: "", image: "", meaning:"")
+# c39 = Card.create(name: "", image: "", meaning:"")
 
-c40 = Card.create(name: "", image: "", meaning:"")
+# c40 = Card.create(name: "", image: "", meaning:"")
 
-c41 = Card.create(name: "", image: "", meaning:"")
+# c41 = Card.create(name: "", image: "", meaning:"")
 
-c42 = Card.create(name: "", image: "", meaning:"")
+# c42 = Card.create(name: "", image: "", meaning:"")
 
 r1 = Reading.create(question: "Will I be happy?", user_id: u1.id)
 

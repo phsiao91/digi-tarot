@@ -6,59 +6,50 @@ import { Link } from "react-router-dom";
 function Welcome({user}) {
 
     const [card, setCard] = useState([])
-    // state = {
-    //     cards: []
-    // }
+    const [threeCards, setThreeCards] = useState([])
 
     const fetchCards = () => { 
+        console.log("fetched!");
 
         fetch("/card")
-
-        .then(response => response.json())
-
-        .then(result => setCard(result)
-          )
-
-        .catch(err => console.log(err))
+            .then(response => response.json())
+            .then(result => setCard(result),
+                console.log(card)
+            )
+            .catch(err => console.log(err))
       }
-      useEffect(fetchCards, [])
-    // componentDidMount() {
-    //     this.fetchCards()
-    // }
+    
+    useEffect(fetchCards, [])
 
-    // const getQuote = () => {
-    //     fetch("https://type.fit/api/quotes")
-    //     .then(res => res.json())
-    //     .then(fetchedQuote => {console.log(fetchedQuote)
-    //         let randomQuote = fetchedQuote[Math.floor(Math.random() * fetchedQuote.length)]
+    const getThreeCards = () => {
+        let threeCards = [];
+        while(threeCards.length < 3){
+            let newCard = card[Math.floor(Math.random() * 34) + 1];
+            if(threeCards.indexOf(newCard) === -1) threeCards.push(newCard);
+        }
+        // console.log(threeCards);
+        setThreeCards(threeCards)
+    }
 
-    //     setQuote(randomQuote)
-
-    // })
-    // }
-    // useEffect(getQuote, [])
-
-    // fetchCards()
-
-    console.log(card)
-    console.log(user)
-
-    const selectCards = () => {
-        console.log("magic fortune!");
-
-    };
+    console.log(threeCards);
 
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
 
-            <button onClick={() => selectCards()}>
+            <button onClick={() => getThreeCards()}>
                 Get a Reading
             </button>
-            <Link to="/reading">
-                <input type="submit" value="Readings"></input>
-            </Link>
+
+            <div className="card-layout-container">
+                <img classname="card-picked" src={threeCards[0].image}></img>
+                <img classname="card-picked" src={threeCards[1].image}></img>
+                <img classname="card-picked" src={threeCards[2].image}></img>
+            </div>
+
         </div>
+
+       
     )
 }
 
