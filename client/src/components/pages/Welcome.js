@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -40,6 +41,7 @@ function Welcome({user}) {
     // fetchCards()
 
     console.log(card)
+    console.log(user)
 
     const selectCards = () => {
         console.log("magic fortune!");
@@ -50,9 +52,12 @@ function Welcome({user}) {
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
 
-            <button onClick={() => fetchCards()}>
+            <button onClick={() => selectCards()}>
                 Get a Reading
             </button>
+            <Link to="/reading">
+                <input type="submit" value="Readings"></input>
+            </Link>
         </div>
     )
 }
