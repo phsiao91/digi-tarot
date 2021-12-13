@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
+import Reading from "./Reading";
 
 
 
@@ -22,16 +23,19 @@ function Welcome({user}) {
     useEffect(fetchCards, [])
 
     const getThreeCards = () => {
-        let threeCards = [];
-        while(threeCards.length < 3){
+        let arr = [];
+        while(arr.length < 3){
             let newCard = card[Math.floor(Math.random() * 34) + 1];
-            if(threeCards.indexOf(newCard) === -1) threeCards.push(newCard);
+            if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
-        // console.log(threeCards);
-        setThreeCards(threeCards)
+        console.log(arr);
+        setThreeCards(arr)
     }
 
-    console.log(threeCards);
+    // useEffect(getThreeCards, [])
+
+    // console.log(getThreeCards);
+    // getThreeCards()
 
     return (
         <div>
