@@ -6,6 +6,8 @@ import SignUp from "./components/Signup";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/pages/Welcome";
+import Reading from "./components/pages/Welcome";
+
 
 function App() {
 
@@ -13,11 +15,15 @@ function App() {
 
   return (
     <div className="App">
-    <NavBar/>
+    <NavBar user={user} setUser={setUser} />
       <main>
         <Router>
           {user? (
             <Switch>
+
+              <Route path="/reading">
+                <Reading/>
+              </Route>
 
               <Route path="/welcome">
                 <Welcome user={user}/>
