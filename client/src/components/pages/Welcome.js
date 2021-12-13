@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from "react";
 
-
-
 function Welcome({user}) {
 
     const [card, setCard] = useState([])
@@ -28,6 +26,14 @@ function Welcome({user}) {
         }
         // console.log(threeCards);
         setThreeCards(threeCards)
+
+        return (
+            <div className="card-layout-container">
+                <img classname="card-picked" src={threeCards[0].image}></img>
+                <img classname="card-picked" src={threeCards[1].image}></img>
+                <img classname="card-picked" src={threeCards[2].image}></img>
+            </div>
+        )
     }
 
     console.log(threeCards);
@@ -40,11 +46,7 @@ function Welcome({user}) {
                 Get a Reading
             </button>
 
-            <div className="card-layout-container">
-                <img classname="card-picked" src={threeCards[0].image}></img>
-                <img classname="card-picked" src={threeCards[1].image}></img>
-                <img classname="card-picked" src={threeCards[2].image}></img>
-            </div>
+            {getThreeCards()}
 
         </div>
 
