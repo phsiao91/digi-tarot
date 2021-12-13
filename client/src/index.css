@@ -14,5 +14,6 @@ body {
 }
 
 .card-picked {
-  
+  width: 200px;
+  height: auto;
 }
