@@ -25,7 +25,7 @@ function Welcome({user}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
         // console.log(threeCards);
-        setThreeCards(threeCards)
+        setThreeCards(arr)
     }
 
     function renderThreeCards() {
@@ -39,34 +39,24 @@ function Welcome({user}) {
                 </>
             }
             </div>
+       
         )
     }
 
-    // getThreeCards()
 
-    // const mapCards = () => {
-
-    // }
-    
-
-    // useEffect(getThreeCards, [])
-
-    // console.log(getThreeCards);
-    // getThreeCards()
 
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
             {/* {getThreeCards()} */}
 
-            <button onClick={getThreeCards()}>
+            <button onClick={() => getThreeCards()}>
                 Get a Reading
             </button>
 
             {renderThreeCards()}
-        </div>
 
-       
+        </div>
     )
 }
 
