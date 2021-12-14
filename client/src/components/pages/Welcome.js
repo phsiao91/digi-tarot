@@ -1,4 +1,11 @@
 import React, {useState, useEffect} from "react";
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+import Reading from "./Reading";
+
+
+>>>>>>> 77d3a5154f965e69b5a91fdbea358c75824debbb
 
 function Welcome({user}) {
 
@@ -19,11 +26,12 @@ function Welcome({user}) {
     useEffect(fetchCards, [])
 
     const getThreeCards = () => {
-        let threeCards = [];
-        while(threeCards.length < 3){
+        let arr = [];
+        while(arr.length < 3){
             let newCard = card[Math.floor(Math.random() * 34) + 1];
-            if(threeCards.indexOf(newCard) === -1) threeCards.push(newCard);
+            if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
+<<<<<<< HEAD
         // console.log(threeCards);
         setThreeCards(threeCards)
 
@@ -34,9 +42,16 @@ function Welcome({user}) {
                 <img classname="card-picked" alt="tarot card" src={threeCards[2].image}></img>
             </div>
         )
+=======
+        console.log(arr);
+        setThreeCards(arr)
+>>>>>>> 77d3a5154f965e69b5a91fdbea358c75824debbb
     }
 
-    console.log(threeCards);
+    // useEffect(getThreeCards, [])
+
+    // console.log(getThreeCards);
+    // getThreeCards()
 
     return (
         <div>
@@ -46,7 +61,11 @@ function Welcome({user}) {
                 Get a Reading
             </button>
 
-            {getThreeCards()}
+            <div className="card-layout-container">
+                <img classname="card-picked" src={threeCards[0].image}></img>
+                <img classname="card-picked" src={threeCards[1].image}></img>
+                <img classname="card-picked" src={threeCards[2].image}></img>
+            </div>
 
         </div>
 
