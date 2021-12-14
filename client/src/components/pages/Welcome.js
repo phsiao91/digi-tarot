@@ -1,8 +1,4 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
-import Reading from "./Reading";
-
-
 
 function Welcome({user}) {
 
@@ -28,8 +24,22 @@ function Welcome({user}) {
             let newCard = card[Math.floor(Math.random() * 34) + 1];
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
-        console.log(arr);
-        setThreeCards(arr)
+        // console.log(threeCards);
+        setThreeCards(threeCards)
+    }
+
+    function renderThreeCards() {
+        return (
+            <div className="card-layout-container">
+            {threeCards.length === 3 &&
+                <>
+                    <img className="card-picked" alt="tarot card" src={threeCards[0].image}></img>
+                    <img className="card-picked" alt="tarot card" src={threeCards[1].image}></img>
+                    <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
+                </>
+            }
+            </div>
+        )
     }
 
     // getThreeCards()
@@ -53,12 +63,7 @@ function Welcome({user}) {
                 Get a Reading
             </button>
 
-            <div className="card-layout-container">
-                <img classname="card-picked" src={threeCards[0].image}></img>
-                <img classname="card-picked" src={threeCards[1].image}></img>
-                <img classname="card-picked" src={threeCards[2].image}></img>
-            </div>
-
+            {renderThreeCards()}
         </div>
 
        

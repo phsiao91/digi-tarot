@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import React, {useState, useEffect} from "react";
+=======
+import React from "react";
+>>>>>>> McKay
 import { useHistory } from "react-router-dom";
 import Welcome from "./pages/Welcome";
 
