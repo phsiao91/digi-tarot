@@ -24,28 +24,24 @@ function Welcome({user}) {
             let newCard = card[Math.floor(Math.random() * 34) + 1];
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
-        // console.log(threeCards);
-        setThreeCards(threeCards)
+        console.log(threeCards);
+        setThreeCards(threeCards)    
     }
 
-    function renderThreeCards() {
+    function returnThreeCards() {
         return (
             <div className="card-layout-container">
-            {threeCards.length === 3 &&
+                {threeCards.length === 3 &&
                 <>
-                    <img className="card-picked" alt="tarot card" src={threeCards[0].image}></img>
-                    <img className="card-picked" alt="tarot card" src={threeCards[1].image}></img>
-                    <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
+                    <img classname="card-picked" src={threeCards[0].image}></img>
+                    <img classname="card-picked" src={threeCards[1].image}></img>
+                    <img classname="card-picked" src={threeCards[2].image}></img>
                 </>
-            }
+                }
             </div>
         )
     }
 
-    // useEffect(getThreeCards, [])
-
-    // console.log(getThreeCards);
-    // getThreeCards()
 
     return (
         <div>
@@ -55,10 +51,9 @@ function Welcome({user}) {
                 Get a Reading
             </button>
 
-            {renderThreeCards()}
-        </div>
+            {returnThreeCards()}
 
-       
+        </div>
     )
 }
 
