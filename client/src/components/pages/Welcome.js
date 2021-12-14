@@ -26,12 +26,18 @@ function Welcome({user}) {
         }
         // console.log(threeCards);
         setThreeCards(threeCards)
+    }
 
+    function renderThreeCards() {
         return (
             <div className="card-layout-container">
-                <img classname="card-picked" alt="tarot card" src={threeCards[0].image}></img>
-                <img classname="card-picked" alt="tarot card" src={threeCards[1].image}></img>
-                <img classname="card-picked" alt="tarot card" src={threeCards[2].image}></img>
+            {threeCards.length === 3 &&
+                <>
+                    <img className="card-picked" alt="tarot card" src={threeCards[0].image}></img>
+                    <img className="card-picked" alt="tarot card" src={threeCards[1].image}></img>
+                    <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
+                </>
+            }
             </div>
         )
     }
@@ -46,8 +52,7 @@ function Welcome({user}) {
                 Get a Reading
             </button>
 
-            {getThreeCards()}
-
+            {renderThreeCards()}
         </div>
 
        
