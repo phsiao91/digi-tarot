@@ -32,6 +32,13 @@ function Welcome({user}) {
         setThreeCards(arr)
     }
 
+    // getThreeCards()
+
+    // const mapCards = () => {
+
+    // }
+    
+
     // useEffect(getThreeCards, [])
 
     // console.log(getThreeCards);
@@ -40,8 +47,9 @@ function Welcome({user}) {
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
+            {/* {getThreeCards()} */}
 
-            <button onClick={() => getThreeCards()}>
+            <button onClick={getThreeCards()}>
                 Get a Reading
             </button>
 
