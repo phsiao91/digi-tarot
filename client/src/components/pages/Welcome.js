@@ -25,7 +25,7 @@ function Welcome({user}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
         // console.log(threeCards);
-        setThreeCards(threeCards)
+        setThreeCards(arr)
     }
 
     function renderThreeCards() {
@@ -38,7 +38,7 @@ function Welcome({user}) {
                     <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
                 </>
             }
-
+            </div>
        
         )
     }
