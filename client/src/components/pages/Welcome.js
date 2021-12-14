@@ -19,10 +19,10 @@ function Welcome({user}) {
     useEffect(fetchCards, [])
 
     const getThreeCards = () => {
-        let threeCards = [];
-        while(threeCards.length < 3){
+        let arr = [];
+        while(arr.length < 3){
             let newCard = card[Math.floor(Math.random() * 34) + 1];
-            if(threeCards.indexOf(newCard) === -1) threeCards.push(newCard);
+            if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
         // console.log(threeCards);
         setThreeCards(threeCards)
@@ -38,11 +38,11 @@ function Welcome({user}) {
                     <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
                 </>
             }
-            </div>
+
+       
         )
     }
 
-    console.log(threeCards);
 
     return (
         <div>
@@ -53,9 +53,8 @@ function Welcome({user}) {
             </button>
 
             {renderThreeCards()}
-        </div>
 
-       
+        </div>
     )
 }
 
