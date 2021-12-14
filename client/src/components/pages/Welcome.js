@@ -25,7 +25,7 @@ function Welcome({user}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
         // console.log(threeCards);
-        setThreeCards(threeCards)
+        setThreeCards(arr)
     }
 
     function renderThreeCards() {
