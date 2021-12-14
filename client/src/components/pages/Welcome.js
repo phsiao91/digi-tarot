@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
 
 function Welcome({user}) {
 
@@ -30,9 +29,9 @@ function Welcome({user}) {
 
         return (
             <div className="card-layout-container">
-                <img classname="card-picked" src={threeCards[0].image}></img>
-                <img classname="card-picked" src={threeCards[1].image}></img>
-                <img classname="card-picked" src={threeCards[2].image}></img>
+                <img classname="card-picked" alt="tarot card" src={threeCards[0].image}></img>
+                <img classname="card-picked" alt="tarot card" src={threeCards[1].image}></img>
+                <img classname="card-picked" alt="tarot card" src={threeCards[2].image}></img>
             </div>
         )
     }
