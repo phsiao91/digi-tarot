@@ -35,6 +35,9 @@ function Welcome({user, setUser}) {
             let newCard = card[Math.floor(Math.random() * 34) + 1];
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
+
+        console.log(threeCards);
+
         setThreeCards(arr)
     }
 
@@ -43,9 +46,20 @@ function Welcome({user, setUser}) {
             <div className="card-layout-container">
             {threeCards.length === 3 &&
                 <>
-                    <img className="card-picked" alt="tarot card" src={threeCards[0].image}></img>
+                    <div className="card-container">
+                        <img className="card-picked" alt="tarot card" src={threeCards[0].image}></img>
+                        <p className="meaning">{threeCards[0].meaning}</p>
+                    </div>
+
+                    <div className="card-container">
                     <img className="card-picked" alt="tarot card" src={threeCards[1].image}></img>
+                    <p className="meaning">{threeCards[1].meaning}</p>
+                    </div>
+
+                    <div className="card-container">
                     <img className="card-picked" alt="tarot card" src={threeCards[2].image}></img>
+                    <p className="meaning">{threeCards[2].meaning}</p>
+                    </div>
                 </>
             }
             </div>
@@ -56,7 +70,6 @@ function Welcome({user, setUser}) {
     
 
       console.log(user)
-
 
     return (
         <div>
