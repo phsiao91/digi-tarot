@@ -14,7 +14,7 @@ function Login( {setUser} ) {
             headers: {
                 'Content-Type': 'application/json'
               },
-              credentials: "include",
+            //   credentials: "include",
               body: JSON.stringify({username, password})
         })
         .then((r) => {
@@ -54,6 +54,7 @@ function Login( {setUser} ) {
                     <input type="submit" onClick={handleLogin} value="Login"></input>
                     </Link>
                 </div>
+                <Link to='signup'>Don't have an account? Sign Up!!</Link>
             </div>
       
     </div>

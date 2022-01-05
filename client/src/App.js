@@ -24,9 +24,10 @@ function App() {
 
   return (
     <div className="App">
+      <Router>
     <NavBar user={user} setUser={setUser} />
       <main>
-        <Router>
+        
           {user? (
             <Switch>
 
@@ -35,7 +36,7 @@ function App() {
               </Route>
 
               <Route path="/welcome">
-                <Welcome user={user}/>
+                <Welcome user={user} setUser={setUser}/>
               </Route>
 
               <Route path="/">
@@ -56,8 +57,9 @@ function App() {
               </Route>
             </Switch>
           )}
-        </Router>
+        
       </main>
+      </Router>
     </div>
   );
 }
