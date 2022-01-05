@@ -4,7 +4,7 @@ import React from 'react'
 function NavBar() {
     return (
         <div>
-            <h1 className="logo">DigiTarot</h1>
+            <p className="logo">DigiTarot</p>
         </div>
     )
 }
