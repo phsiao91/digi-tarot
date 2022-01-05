@@ -65,12 +65,8 @@ function Welcome({user}) {
             </button>
             
 
-<<<<<<< HEAD
-            {returnThreeCards()}
-=======
             {renderThreeCards()}
 
->>>>>>> 818c771642aa41f4428ee4b74c42829ff4d4c4b9
         </div>
     )
 }
