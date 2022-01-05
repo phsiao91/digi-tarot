@@ -52,7 +52,6 @@ function Welcome({user}) {
             </button>
 
             {returnThreeCards()}
-
         </div>
     )
 }
