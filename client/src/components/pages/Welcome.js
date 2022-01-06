@@ -1,12 +1,23 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
-function Welcome({user}) {
+function Welcome({user, setUser}) {
 
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
 
+    console.log(setUser)
+
+    function handleLogoutClick() {
+        fetch("/logout", { method: "DELETE" }).then((r) => {
+          if (r.ok) {
+            setUser(null);
+          }
+        });
+      }
+
     const fetchCards = () => { 
-        console.log("fetched!");
+        // console.log("fetched!");
 
         fetch("/card")
             .then(response => response.json())
@@ -24,7 +35,9 @@ function Welcome({user}) {
             let newCard = card[Math.floor(Math.random() * 80) + 1];
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
+
         console.log(threeCards);
+
         setThreeCards(arr)
     }
 
@@ -54,21 +67,21 @@ function Welcome({user}) {
         )
     }
 
+    
+
+      console.log(user)
 
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
-            
-            <h5>Choose a Reading:</h5>
-            <button className="reading btn" onClick={() => getThreeCards()}>
-                Past, Present, Future
+            <button onClick={ getThreeCards}>
+                Get a Reading
             </button>
-            
-
             {renderThreeCards()}
-
+            {/* <Link to="/" onClick={handleLogoutClick}>Logout</Link> */}
         </div>
     )
 }
+
 
 export default Welcome
