@@ -21,7 +21,7 @@ function Welcome({user}) {
     const getThreeCards = () => {
         let arr = [];
         while(arr.length < 3){
-            let newCard = card[Math.floor(Math.random() * 34) + 1];
+            let newCard = card[Math.floor(Math.random() * 80) + 1];
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
         console.log(threeCards);
