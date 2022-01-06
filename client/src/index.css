@@ -1,85 +1,100 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5vw;
-    background: rgb(46,0,182);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5vw;
+  background: rgb(46, 0, 182);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .logo {
-    font-family: 'UnifrakturCook', cursive;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    font-size: xxx-large;
+  font-family: "UnifrakturCook", cursive;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: xxx-large;
 
-    animation: pulsate 2.5s infinite alternate;    
+  animation: pulsate 2.5s infinite alternate;
 }
 
 @keyframes pulsate {
   100% {
     /* Larger blur radius */
-    text-shadow:
-      0 0 8px #fff,
-      0 0 22px #fff,
-      0 0 38px #fff,
-      0 0 80px rgb(255, 255, 117),
-      0 0 160px rgb(255, 255, 117),
-      0 0 180px rgb(255, 255, 117),
-      0 0 200px rgb(255, 255, 117),
+    text-shadow: 0 0 8px #fff, 0 0 22px #fff, 0 0 38px #fff,
+      0 0 80px rgb(255, 255, 117), 0 0 160px rgb(255, 255, 117),
+      0 0 180px rgb(255, 255, 117), 0 0 200px rgb(255, 255, 117),
       0 0 300px rgb(255, 255, 117);
   }
   0% {
     /* Smaller blur radius */
-    text-shadow:
-      0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 10px rgb(255, 255, 117),
-      0 0 45px rgb(255, 255, 117),
-      0 0 55px rgb(255, 255, 117),
-      0 0 70px rgb(255, 255, 117),
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff,
+      0 0 10px rgb(255, 255, 117), 0 0 45px rgb(255, 255, 117),
+      0 0 55px rgb(255, 255, 117), 0 0 70px rgb(255, 255, 117),
       0 0 80px rgb(255, 255, 117);
   }
 }
 
 button {
-	background:linear-gradient(to bottom, #7892c2 5%, #002aa8 100%);
-	background-color:#7892c2;
-	border-radius:5px;
-	border: 0px solid #4e6096;
-	display:inline-block;
-	cursor:pointer;
-	font-size:15px;
-	padding:11px 23px;
-	text-decoration:none;
+  background: linear-gradient(to bottom, #7892c2 5%, #002aa8 100%);
+  background-color: #7892c2;
+  border-radius: 5px;
+  border: 0px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 11px 23px;
+  text-decoration: none;
 
   margin-bottom: 1em;
 }
 button:hover {
-	background:linear-gradient(to bottom, rgb(255, 255, 117) 5%, #002aa8 100%);
-	background-color:#002aa8;
+  background: linear-gradient(to bottom, rgb(255, 255, 117) 5%, #002aa8 100%);
+  background-color: #002aa8;
 }
 button:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
+.button {
+  background: linear-gradient(to bottom, #7892c2 5%, #002aa8 100%);
+  background-color: #7892c2;
+  border-radius: 5px;
+  border: 0px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 11px 23px;
+  text-decoration: none;
 
-    
+  margin-bottom: 1em;
+}
+.button:hover {
+  background: linear-gradient(to bottom, rgb(255, 255, 117) 5%, #002aa8 100%);
+  background-color: #002aa8;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
 
 .card-layout-container {
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   max-width: 700px;
   margin: auto;
 }
 
-.card-picked, .meaning {
+.card-picked,
+.meaning {
   width: 25vw;
   max-width: 200px;
   height: auto;

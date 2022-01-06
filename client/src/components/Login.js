@@ -51,7 +51,7 @@ function Login( {setUser} ) {
                         </div>
                     </div>
                     <Link to="/welcome">
-                    <input type="submit" onClick={handleLogin} value="Login"></input>
+                    <input type="submit" className="button" onClick={handleLogin} value="Login"></input>
                     </Link>
                 </div>
                 <Link to='signup'>Don't have an account? Sign Up!!</Link>
