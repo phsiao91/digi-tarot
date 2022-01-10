@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/pages/Welcome";
 import Reading from "./components/pages/Welcome";
+import Question from "./components/pages/Question";
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
 
               <Route path="/reading">
                 <Reading/>
+              </Route>
+
+              <Route path="/question">
+                <Question/>
               </Route>
 
               <Route path="/welcome">
