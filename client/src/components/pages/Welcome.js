@@ -1,20 +1,20 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Welcome({user, setUser}) {
 
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
 
-    console.log(setUser)
+    // console.log(setUser)
 
-    function handleLogoutClick() {
-        fetch("/logout", { method: "DELETE" }).then((r) => {
-          if (r.ok) {
-            setUser(null);
-          }
-        });
-      }
+    // function handleLogoutClick() {
+    //     fetch("/logout", { method: "DELETE" }).then((r) => {
+    //       if (r.ok) {
+    //         setUser(null);
+    //       }
+    //     });
+    //   }
 
     const fetchCards = () => { 
         // console.log("fetched!");
@@ -69,7 +69,7 @@ function Welcome({user, setUser}) {
 
     
 
-      console.log(user)
+    //   console.log(user)
 
     return (
         <div>

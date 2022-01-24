@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_cards
   resources :tarots
   resources :readings
   resources :cards

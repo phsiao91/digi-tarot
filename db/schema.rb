@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_223352) do
+ActiveRecord::Schema.define(version: 2022_01_24_044143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 2021_11_30_223352) do
     t.index ["reading_id"], name: "index_tarots_on_reading_id"
   end
 
+  create_table "user_cards", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "meaning"
+    t.bigint "reading_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reading_id"], name: "index_user_cards_on_reading_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
@@ -50,4 +60,5 @@ ActiveRecord::Schema.define(version: 2021_11_30_223352) do
 
   add_foreign_key "readings", "users"
   add_foreign_key "tarots", "readings"
+  add_foreign_key "user_cards", "readings"
 end
