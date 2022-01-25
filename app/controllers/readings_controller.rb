@@ -9,3 +9,10 @@ class ReadingsController < ApplicationController
         end
     end
 end
+
+
+private
+
+def reading_params
+    params.permit(:question)
+end

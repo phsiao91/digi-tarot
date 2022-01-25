@@ -37,7 +37,7 @@ function App() {
               </Route>
 
               <Route path="/question">
-                <Question/>
+                <Question user={user} setUser={setUser}/>
               </Route>
 
               <Route path="/welcome">
