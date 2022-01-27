@@ -6,6 +6,7 @@ function Welcome({user, setUser}) {
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
     const [question, setQuestion] = useState("")
+    const [error, setError] = useState("")
 
     // console.log(setUser)
 
@@ -33,8 +34,13 @@ function Welcome({user, setUser}) {
                     return res.json()
                     .then(setQuestion(""))
                     }else {
-                    return res.json().then(errors => Promise.reject(errors))
-                    }
+                        res.json().then((errorData) => setError(errorData.error));
+                      }
+                })
+                .catch(error => {
+                    // document.getElementById("error").innerHTML = error.message
+                    throw new Error("please ask a question")
+                    // console.error(error)
                 })
     }
 
@@ -113,6 +119,7 @@ function Welcome({user, setUser}) {
                                 />
                         </div>
                     </div>
+                    <div id="error">{error}</div>
                     <Link to="/question">
                     <input type="submit" className="button" onClick={handleSubmit} value="Ask a question"></input>
                     </Link>

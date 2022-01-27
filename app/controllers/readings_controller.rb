@@ -5,7 +5,7 @@ class ReadingsController < ApplicationController
         if reading.valid?
             render json: reading, status: :ok
         else
-            render json: {error: "please put in a question"}, status: :unauthorized
+            render json: {error: "please put in a question"}, status: :not_acceptable
         end
     end
 end
