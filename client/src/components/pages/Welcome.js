@@ -102,39 +102,29 @@ function Welcome({user, setUser}) {
     
 
     //   console.log(user)
+    const redirect = () => {
+        window.location.href="http://localhost:4000/question"
+    }
 
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
             <div>
-                <div className="row-1">
-                    <div className="col-1">
-                        <div className="form-group-1">
-                            <label htmlFor="question">What would you like to know?</label>
-                            <input 
-                                type="text"
-                                name="summary"
-                                value={question}
-                                onChange={(e) => setQuestion(e.target.value)}
-                                />
-                        </div>
-                    </div>
+                <form onSubmit={handleSubmit} method="POST" >
+                    <label htmlFor="username">What would you like to know?</label>
+                    <input
+                        type="text"
+                        id="username"
+                        autoComplete="off"
+                        value={question}
+                        onChange={(e) => setQuestion(e.target.value)}
+                    />
                     <div id="error">{error}</div>
-                    <Link to="/question">
-                    <input type="submit" className="button" onClick={handleSubmit} value="Ask a question"></input>
-                    </Link>
-                </div>
+                    <button type="submit" onClick={redirect}>Ask a question</button>
+                </form>
             </div>
-            {/* <h2>{question}</h2>
-            <button onClick={ getThreeCards}>
-                Get a Reading
-            </button>
-            {renderThreeCards()}
-
-            <button>
-                Save Reading
-            </button> */}
         </div>
+
     )
 }
 

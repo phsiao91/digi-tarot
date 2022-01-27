@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Question({user, setUser}) {
 
-    const [question, setQuestion] = useState("")
+    const [question, setQuestion] = useState('')
 
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
@@ -20,12 +20,26 @@ function Question({user, setUser}) {
         fetch("/card")
             .then(response => response.json())
             .then(result => setCard(result),
-                console.log(card)
+                // console.log(card)
             )
             .catch(err => console.log(err))
       }
     
     useEffect(fetchCards, [])
+
+    const fetchQuestion = () => { 
+        // console.log("fetched!");
+        fetch("/reading")
+            .then(response => response.json())
+            .then(result => setQuestion(result.question),
+                // console.log(question)
+            )
+            .catch(err => console.log(err))
+      }
+
+      useEffect(fetchQuestion, [])
+
+    //   console.log(question)
 
     const getThreeCards = () => {
         let arr = [];
@@ -34,7 +48,7 @@ function Question({user, setUser}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
 
-        console.log(threeCards);
+        // console.log(threeCards);
 
         setThreeCards(arr)
     }
@@ -94,6 +108,7 @@ function Question({user, setUser}) {
                 </div>
             </div> */}
             {/* <h2>{question}</h2> */}
+            <div>{question}?</div>
             <button onClick={ getThreeCards}>
                 Get a Reading
             </button>

@@ -104,3 +104,8 @@ button:active {
   color: white;
   font-size: small;
 }
+
+#error {
+  color: red;
+  text-decoration: underline;
+}

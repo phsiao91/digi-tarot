@@ -57,7 +57,7 @@ function SignUp({ setUser }) {
         <button type="submit">Sign Up</button>
       </form>
 
-      <Link to='welcome'>Already have an account? Login</Link>
+      <Link to='login'>Already have an account? Login</Link>
     </div>
   );
 }

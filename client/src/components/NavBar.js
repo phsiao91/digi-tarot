@@ -12,7 +12,7 @@ function NavBar({setUser}) {
         });
       }
 
-    console.log(setUser)
+    // console.log(setUser)
 
     return (
         <>
