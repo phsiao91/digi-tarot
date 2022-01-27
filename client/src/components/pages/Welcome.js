@@ -18,21 +18,25 @@ function Welcome({user, setUser}) {
     //   }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-    fetch("/question", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        question
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    }).catch(err => console.log(err));
-  }
+        e.preventDefault()
+            fetch("/question", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+                body: JSON.stringify({
+                    question
+                }),
+            }).then(res => {
+                if (res.ok) {
+                    return res.json()
+                    .then(setQuestion(""))
+                    }else {
+                    return res.json().then(errors => Promise.reject(errors))
+                    }
+                })
+    }
 
 
     // const fetchCards = () => { 
@@ -110,7 +114,7 @@ function Welcome({user, setUser}) {
                         </div>
                     </div>
                     <Link to="/question">
-                    <input type="submit" className="button" onSubmit={handleSubmit} value="Ask a question"></input>
+                    <input type="submit" className="button" onClick={handleSubmit} value="Ask a question"></input>
                     </Link>
                 </div>
             </div>

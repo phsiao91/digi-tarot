@@ -1,7 +1,7 @@
 class ReadingsController < ApplicationController
 
     def create
-        reading = @current_user.reading.create(reading_params)
+        reading = @current_user.readings.create(reading_params)
         if reading.valid?
             render json: reading, status: :ok
         else
@@ -14,5 +14,5 @@ end
 private
 
 def reading_params
-    params.permit(:question)
+    params.permit(:question, :user_id)
 end
