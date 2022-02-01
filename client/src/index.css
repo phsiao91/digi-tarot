@@ -118,11 +118,11 @@ button:active {
 }
 
 .screen {
-  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  background: linear-gradient(90deg, rgb(255, 255, 117), white);
   position: relative;
   height: 600px;
   width: 360px;
-  box-shadow: 0px 0px 24px #5c5696;
+  box-shadow: 0px 0px 24px #4e6096;
 }
 
 .screen__content {
@@ -159,7 +159,7 @@ button:active {
 .screen__background__shape2 {
   height: 220px;
   width: 220px;
-  background: #6c63ac;
+  background: rgba(0, 212, 255, 1);
   top: -172px;
   right: 0;
   border-radius: 32px;
@@ -168,7 +168,7 @@ button:active {
 .screen__background__shape3 {
   height: 540px;
   width: 190px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
+  background: linear-gradient(270deg, rgba(9, 9, 121, 1), rgba(0, 212, 255, 1));
   top: -24px;
   right: 0;
   border-radius: 32px;
@@ -177,7 +177,7 @@ button:active {
 .screen__background__shape4 {
   height: 400px;
   width: 200px;
-  background: #7e7bb9;
+  background: rgba(9, 9, 121, 1);
   top: 420px;
   right: 50px;
   border-radius: 60px;

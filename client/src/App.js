@@ -31,23 +31,21 @@ function App() {
         
           {user? (
             <Switch>
-
+              <Route path="/welcome">
+                <Welcome user={user}/>
+              </Route>
+              <Route path="/nav">
+                <NavBar user={user}/>
+              </Route>
               <Route path="/reading">
                 <Reading/>
               </Route>
-
               <Route path="/question">
-                <Question user={user} setUser={setUser}/>
+                <Question user={user}/>
               </Route>
-
-              <Route path="/welcome">
-                <Welcome user={user} setUser={setUser}/>
-              </Route>
-
               <Route path="/">
                 <Home user={user}/>
               </Route>
-              
             </Switch>
             ) : (
             <Switch>
@@ -58,7 +56,7 @@ function App() {
                 <SignUp setUser={setUser}/>
               </Route>
               <Route path="/">
-                <Home/>
+                <Home setUser={setUser}/>
               </Route>
             </Switch>
           )}

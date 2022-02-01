@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Welcome({user, setUser}) {
 
-    const [card, setCard] = useState([])
-    const [threeCards, setThreeCards] = useState([])
+    // const [card, setCard] = useState([])
+    // const [threeCards, setThreeCards] = useState([])
     const [question, setQuestion] = useState("")
     const [error, setError] = useState("")
 
-    // console.log(setUser)
+    console.log(user)
 
     // function handleLogoutClick() {
     //     fetch("/logout", { method: "DELETE" }).then((r) => {

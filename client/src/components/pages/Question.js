@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
-function Question({user, setUser}) {
+function Question({user}) {
 
     const [question, setQuestion] = useState('')
 

@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 
 function Login( {setUser} ) {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    const history = useHistory()
     
     const handleLogin = (e) => {
         e.preventDefault()
@@ -24,6 +27,20 @@ function Login( {setUser} ) {
         })
     }
 
+    const signup = () => {
+        let path = "/signup"
+        history.push(path)
+      }
+
+    const welcomes = () => {
+        let path = "/welcome"
+        history.push(path)
+      }
+
+
+      const redirect = () => {
+        window.location.href="http://localhost:4000/welcome"
+    }
 
     return (
     //     <div>
@@ -61,21 +78,23 @@ function Login( {setUser} ) {
     <div class="container">
         <div class="screen">
           <div class="screen__content">
-            <form class="login">
+            <form class="login" onSubmit={handleLogin} method="POST">
               <div class="login__field">
                 <i class="login__icon fas fa-user"></i>
-                <input type="text" class="login__input" placeholder="Username / Email"/>
+                <input type="text" class="login__input" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username / Email"/>
               </div>
               <div class="login__field">
                 <i class="login__icon fas fa-lock"></i>
-                <input type="password" class="login__input" placeholder="Password"/>
+                <input type="password" class="login__input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
               </div>
-              <button class="button login__submit">
+              <button class="button login__submit" type="submit" onClick={redirect}>
                 <span class="button__text">Login</span>
                 <i class="button__icon fas fa-chevron-right"></i>
               </button>				
             </form>
-            <div class="social-login">
+            <div class="social-login" onClick={signup}>
+              <h4>Don't have aan account?</h4>
+              <h4>Sign up here</h4>
             </div>
           </div>
           <div class="screen__background">
