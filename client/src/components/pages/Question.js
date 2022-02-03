@@ -82,6 +82,24 @@ function Question({user}) {
         )
     }
 
+
+    const handlePost = (e) => {
+        e.preventDefault()
+        fetch("/readingcards", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            //   credentials: "include",
+              body: JSON.stringify({username, password})
+        })
+        .then((r) => {
+            if (r.ok) {
+              r.json().then((user) => setUser(user));
+            }
+        })
+    }
+
     
 
     //   console.log(user)

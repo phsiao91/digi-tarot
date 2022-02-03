@@ -107,20 +107,21 @@ function Welcome({user, setUser}) {
     }
 
     return (
-        <div>
-            <h4 className="welcome"> Welcome, {user.username}</h4>
+        <div className="subscribe-box">
+            <h2 className="welcome"> Welcome, {user.username}</h2>
             <div>
-                <form onSubmit={handleSubmit} method="POST" >
-                    <label htmlFor="username">What would you like to know?</label>
+                <form className="subscribe" onSubmit={handleSubmit} method="POST" >
+                    {/* <label htmlFor="username">What would you like to know?</label> */}
                     <input
                         type="text"
-                        id="username"
+                        id="question"
                         autoComplete="off"
                         value={question}
                         onChange={(e) => setQuestion(e.target.value)}
+                        placeholder="What would you like to know?"
                     />
                     <div id="error">{error}</div>
-                    <button type="submit" onClick={redirect}>Ask a question</button>
+                    <button className="question-button" type="submit" onClick={redirect}>Ask a question</button>
                 </form>
             </div>
         </div>
