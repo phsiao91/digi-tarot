@@ -1,3 +1,8 @@
+This is a pair programming project built by two Flatiron grads called DigiTarot  
+A fun little web appication where users can ask questions and receive their tarot reading
+Frontend: React, Custom CSS, Tailwind
+Backend: Ruby on Rails, Sinaatra, Active Record, bcrypt
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
