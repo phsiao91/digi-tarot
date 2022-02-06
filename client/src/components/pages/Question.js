@@ -83,21 +83,24 @@ function Question({user}) {
     }
 
 
-    const handlePost = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-        fetch("/readingcards", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-              },
-            //   credentials: "include",
-              body: JSON.stringify({username, password})
-        })
-        .then((r) => {
-            if (r.ok) {
-              r.json().then((user) => setUser(user));
-            }
-        })
+            fetch("/introductions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+                body: JSON.stringify({
+                    threeCards
+                }),
+            }).then(res => {
+                if (res.ok) {
+                    return res.json()
+                    }else {
+                    return res.json().then(errors => Promise.reject(errors))
+                    }
+                })
     }
 
     
