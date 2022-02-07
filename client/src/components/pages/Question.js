@@ -23,7 +23,7 @@ function Question({user}) {
 
     getId(threeCards)
 
-    console.log(idArray)
+    
 
 
 
@@ -62,7 +62,7 @@ function Question({user}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
 
-        console.log(threeCards);
+        
 
         setThreeCards(arr)
     }
@@ -95,6 +95,11 @@ function Question({user}) {
        
         )
     }
+
+
+    console.log(threeCards);
+
+    console.log(idArray)
 
 
 

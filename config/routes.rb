@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   get "/card", to: "cards#show"
   post "/question", to: "readings#create"
   get "/reading", to: "readings#index"
-  post "/readingcards", to: "user_cards#create"
+  # post "/readingcards", to: "user_cards#create"
 end

@@ -113,9 +113,9 @@ c79 = Card.create(name: "King of Swords", image: "https://www.tarotcardmeanings.
 
 r1 = Reading.create(question: "Will I be happy?", user_id: u1.id)
 
-s1 = Tarot.create(name: "The Fool", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-fool.jpg", meaning: "The Tarot Fool card is a jolly one, judging from the image on it. He may be a fool, but doesn't he look happy? Maybe that's what it takes to be joyous in this world. Ignorance is bliss.", reading_id: r1.id)
+# s1 = Tarot.create(name: "The Fool", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-fool.jpg", meaning: "The Tarot Fool card is a jolly one, judging from the image on it. He may be a fool, but doesn't he look happy? Maybe that's what it takes to be joyous in this world. Ignorance is bliss.", reading_id: r1.id)
 
-s2 = Tarot.create(name: "The Magician", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-magician.jpg", meaning: "The Tarot Magician card indicates things being solved as if by magic. It can be a person making big problems disappear or splendid solutions appear as if out of nowhere. But life doesn't work like that. If it's too good to be true, it probably isn't.", reading_id: r1.id)
+# s2 = Tarot.create(name: "The Magician", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-magician.jpg", meaning: "The Tarot Magician card indicates things being solved as if by magic. It can be a person making big problems disappear or splendid solutions appear as if out of nowhere. But life doesn't work like that. If it's too good to be true, it probably isn't.", reading_id: r1.id)
 
-s3 = Tarot.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.", reading_id: r1.id)
+# s3 = Tarot.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.", reading_id: r1.id)
 
