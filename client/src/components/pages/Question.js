@@ -7,11 +7,24 @@ function Question({user}) {
 
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
+    const [cardId, setCardId] = useState([])
+
+    // console.log(threeCards[0].id)
 
 
-    const handleSubmit = () => {
-        
+    let idArray = []
+
+    const getId = (arr) => {
+        for(let i = 0; i < arr.length; i++){
+            idArray.push(arr[i].id)
+        }
+        return arr
     }
+
+    getId(threeCards)
+
+    console.log(idArray)
+
 
 
     const fetchCards = () => { 
@@ -41,6 +54,7 @@ function Question({user}) {
 
     //   console.log(question)
 
+
     const getThreeCards = () => {
         let arr = [];
         while(arr.length < 3){
@@ -48,7 +62,7 @@ function Question({user}) {
             if(arr.indexOf(newCard) === -1) arr.push(newCard);
         }
 
-        // console.log(threeCards);
+        console.log(threeCards);
 
         setThreeCards(arr)
     }
@@ -83,25 +97,28 @@ function Question({user}) {
     }
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-            fetch("/introductions", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                credentials: "include",
-                body: JSON.stringify({
-                    threeCards
-                }),
-            }).then(res => {
-                if (res.ok) {
-                    return res.json()
-                    }else {
-                    return res.json().then(errors => Promise.reject(errors))
-                    }
-                })
-    }
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //         fetch("/introductions", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             credentials: "include",
+    //             body: JSON.stringify({
+    //                 id,
+                    
+
+    //             }),
+    //         }).then(res => {
+    //             if (res.ok) {
+    //                 return res.json()
+    //                 }else {
+    //                 return res.json().then(errors => Promise.reject(errors))
+    //                 }
+    //             })
+    // }
 
     
 
@@ -110,25 +127,6 @@ function Question({user}) {
     return (
         <div>
             <h4 className="welcome"> Welcome, {user.username}</h4>
-            {/* <div>
-                <div className="row-1">
-                    <div className="col-1">
-                        <div className="form-group-1">
-                            <label htmlFor="question">Question for today</label>
-                            <input 
-                                type="text"
-                                name="summary"
-                                value={question}
-                                onChange={(e) => setQuestion(e.target.value)}
-                                />
-                        </div>
-                    </div>
-                    <Link to="/question">
-                    <input type="submit" className="button" onClick={handleSubmit} value="Ask a question"></input>
-                    </Link>
-                </div>
-            </div> */}
-            {/* <h2>{question}</h2> */}
             <div>{question}?</div>
             <button onClick={ getThreeCards}>
                 Get a Reading
