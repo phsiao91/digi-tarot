@@ -7,7 +7,9 @@ function Question({user}) {
 
     const [card, setCard] = useState([])
     const [threeCards, setThreeCards] = useState([])
-    const [cardId, setCardId] = useState([])
+    // const [card1, setCard1] = useState()
+    // const [card2, setCard2] = useState()
+    // const [card3, setCard3] = useState()
 
     // console.log(threeCards[0].id)
 
@@ -22,6 +24,36 @@ function Question({user}) {
     }
 
     getId(threeCards)
+
+    let card1 = idArray[0]
+    let card2 = idArray[1]
+    let card3 = idArray[2]
+
+    console.log(card1)
+    console.log(card2)
+    console.log(card3)
+
+    const saveReading = (e) => {
+        e.preventDefault()
+        fetch("/save", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                card1,
+                card2,
+                card3
+            }),
+        }).then(res => {
+            if (res.ok) {
+                return res.json()
+            } else{
+                return res.json().then(errors => Promise.reject(errors))
+            }
+        })
+    }
 
     
 
@@ -139,7 +171,7 @@ function Question({user}) {
             {renderThreeCards()}
             {/* <Link to="/" onClick={handleLogoutClick}>Logout</Link> */}
 
-            <button>
+            <button onClick={saveReading}>
                 Save Reading
             </button>
         </div>
