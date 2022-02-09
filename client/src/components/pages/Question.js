@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Question({user}) {
 
@@ -133,32 +133,6 @@ function Question({user}) {
 
     console.log(idArray)
 
-
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //         fetch("/introductions", {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             credentials: "include",
-    //             body: JSON.stringify({
-    //                 id,
-                    
-
-    //             }),
-    //         }).then(res => {
-    //             if (res.ok) {
-    //                 return res.json()
-    //                 }else {
-    //                 return res.json().then(errors => Promise.reject(errors))
-    //                 }
-    //             })
-    // }
-
-    
-
     //   console.log(user)
 
     return (
@@ -169,8 +143,6 @@ function Question({user}) {
                 Get a Reading
             </button>
             {renderThreeCards()}
-            {/* <Link to="/" onClick={handleLogoutClick}>Logout</Link> */}
-
             <button onClick={saveReading}>
                 Save Reading
             </button>
