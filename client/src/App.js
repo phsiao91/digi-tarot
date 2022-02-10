@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Welcome from "./components/pages/Welcome";
 import Reading from "./components/pages/Welcome";
 import Question from "./components/pages/Question";
+import UserReadings from "./components/pages/UserReadings";
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
             <Switch>
               <Route path="/welcome">
                 <Welcome user={user}/>
+              </Route>
+              <Route path="/userreadings">
+                <UserReadings user={user}/>
               </Route>
               <Route path="/nav">
                 <NavBar user={user}/>

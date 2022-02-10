@@ -14,6 +14,9 @@ class ReadingsController < ApplicationController
         render json: @current_user.readings.last, status: :ok
     end
 
+    def show
+        render json: @current_user.readings.all, status: :ok
+    end
 
 
     private

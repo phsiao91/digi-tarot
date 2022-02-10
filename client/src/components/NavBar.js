@@ -20,6 +20,10 @@ function NavBar({user, setUser}) {
 
     // console.log(setUser)
 
+    const redirect = () => {
+      window.location.href="http://localhost:4000/userreadings"
+  }
+
     return (
       <>
         <div>
@@ -27,8 +31,9 @@ function NavBar({user, setUser}) {
             {user? (
               // <Switch>
               <div>
-                
                 <button onClick={handleLogoutClick}>Logout</button>
+                <br></br>
+                <button onClick={redirect}>Past Readings</button>
               </div>
               // </Switch>
               ) : (
