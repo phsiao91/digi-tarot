@@ -8,7 +8,7 @@ function Welcome({user, setUser}) {
     const [question, setQuestion] = useState("")
     const [error, setError] = useState("")
 
-    console.log(user)
+    // console.log(user)
 
     // function handleLogoutClick() {
     //     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -38,7 +38,6 @@ function Welcome({user, setUser}) {
                       }
                 })
                 .catch(error => {
-                    // document.getElementById("error").innerHTML = error.message
                     throw new Error("please ask a question")
                     // console.error(error)
                 })

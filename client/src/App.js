@@ -23,12 +23,13 @@ function App() {
     });
   }, []);
 
+  console.log(user)
+
   return (
     <div className="App">
       <Router>
     <NavBar user={user} setUser={setUser} />
       <main>
-        
           {user? (
             <Switch>
               <Route path="/welcome">

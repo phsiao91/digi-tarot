@@ -119,3 +119,4 @@ r1 = Reading.create(question: "Will I be happy?", user_id: u1.id)
 
 # s3 = Tarot.create(name: "The High Priestess", image: "https://www.tarotcardmeanings.net/images/tarotcards/tarot-highpriestess.jpg", meaning: "The Tarot High Priestess guards the secrets and ensures the master plan. In doing so, she knows to act with caution, very discreetly, and paying attention to details that are believe to be insignificant.", reading_id: r1.id)
 
+puts "seeding done"

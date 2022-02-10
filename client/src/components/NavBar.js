@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import {  Switch } from "react-router-dom";
+// import { useState, useEffect } from "react";
 
-function NavBar({setUser}) {
+function NavBar({user, setUser}) {
+
+  // const [user, setUser] = useState(null)
+
+
 
 
     function handleLogoutClick() {
@@ -15,12 +21,25 @@ function NavBar({setUser}) {
     // console.log(setUser)
 
     return (
-        <>
+      <>
         <div>
-            <h1 className="logo">DigiTarot</h1>
-            <Link to="/" onClick={handleLogoutClick}>Logout</Link>
+          <h1 className="logo">DigiTarot</h1>
+            {user? (
+              // <Switch>
+              <div>
+                
+                <button onClick={handleLogoutClick}>Logout</button>
+              </div>
+              // </Switch>
+              ) : (
+              // <Switch>
+                <div>
+
+                </div>
+              // </Switch>
+              )}
         </div>
-        </>
+      </>
     )
 }
 
