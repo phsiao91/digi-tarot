@@ -18,6 +18,8 @@ function Welcome({user, setUser}) {
     //     });
     //   }
 
+    // added pull request
+
     const handleSubmit = (e) => {
         e.preventDefault()
             fetch("/question", {
